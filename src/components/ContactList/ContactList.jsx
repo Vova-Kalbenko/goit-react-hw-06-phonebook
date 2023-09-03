@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/contacts/contacts-slice';
 import  {getFilteredContacts}  from '../../redux/contacts/contacts-selectors';
@@ -40,15 +40,12 @@ const ContactList = () => {
 
 export default ContactList;
 
-// ContactList.propTypes = {
-//   visibleContacts: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//     })
-//   ),
-// };
+ContactList.propTypes = {
+  visibleContacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ),
+};
 
-// В visibleContacts приезжает масив пользователей с именем номером и идшником
-// +ИДЕТ ПОДВЯЗКА С МЕТОДУ (45 СТРОКА ФОНБУКА)
-// с ФОНБУКА СО СТЕЙТА + МЕТОД ДЛЯ УДАЛЕНИЯ КОНТАКТА
 

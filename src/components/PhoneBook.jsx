@@ -13,8 +13,7 @@ export default function PhoneBook() {
       <h2>Contacts</h2>
       <div>
         <Filter/>
-        <ContactList
-        />
+        <ContactList/>
       </div>
     </section>
   );
