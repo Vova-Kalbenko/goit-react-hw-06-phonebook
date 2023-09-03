@@ -1,15 +1,18 @@
-// contacts-slice.js залишаємо без змін, видаляємо перевірку та алерт
+
 import { createSlice } from '@reduxjs/toolkit';
-import { nanoid } from '@reduxjs/toolkit';
+// import { nanoid } from '@reduxjs/toolkit';
 
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: [],
   reducers: {
-    addContact: (store, { payload }) => {
-      store.push({ ...payload, id: nanoid() });
+    addContact: (store, action) => {
+      // console.log(action.payload)
+      // store.push(action.payload);
+      return [...store, action.payload]
+     
     },
-    deleteContact: (store, { payload }) => store.filter((item) => item.id !== payload),
+    deleteContact: (store, action) =>  store.filter((item) => item.id !== action.payload),
   },
 });
 
